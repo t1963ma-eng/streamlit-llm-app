@@ -70,7 +70,7 @@ def get_llm_response(input_text, selected_item):
     ]
 
     result = llm.invoke(messages)
-return result.content
+    return result.content
 
 
 # ---------------------------------------------------
