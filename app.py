@@ -1,10 +1,14 @@
+import os
 from dotenv import load_dotenv
-
-load_dotenv()
-
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
+
+load_dotenv()
+
+# ローカル実行時は.envから、Streamlit Cloud上ではSecretsから読み込む
+if "OPENAI_API_KEY" in st.secrets:
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 # ---------------------------------------------------
 # 画面表示：アプリの概要と操作方法
