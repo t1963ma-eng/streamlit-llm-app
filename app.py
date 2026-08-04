@@ -2,8 +2,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-pip install streamlit langchain langchain-openai python-dotenv
-
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
