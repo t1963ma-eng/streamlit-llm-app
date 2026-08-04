@@ -69,8 +69,8 @@ def get_llm_response(input_text, selected_item):
         HumanMessage(content=input_text),
     ]
 
-    result = llm(messages)
-    return result.content
+    result = llm.invoke(messages)
+return result.content
 
 
 # ---------------------------------------------------
